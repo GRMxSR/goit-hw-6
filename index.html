@@ -21,39 +21,73 @@
     />
     <!-- Css -->
     <link rel="stylesheet" href="./css/style.css" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="conteiner-header container">
-        <nav class="navigation">
-          <a class="logo" href="./index.html"> Web<span>Studio</span></a>
-          <ul class="page-nav">
-            <li><a href="./index.html" class="nav-link">Studio</a></li>
-            <li><a href="" class="nav-link">Portfolio</a></li>
-            <li><a href="" class="nav-link">Contacts</a></li>
-          </ul>
-        </nav>
-        <address class="contacts">
-          <ul class="list-contacts">
-            <li>
-              <a href="mailto:info@devstudio.com" class="item-contacts"
-                >info@devstudio.com</a
-              >
-            </li>
-            <li>
-              <a href="tel:+110001111111" class="item-contacts"
-                >+11 (000) 111-11-11</a
-              >
-            </li>
-          </ul>
-        </address>
-      </div>
-    </header>
+  <header class="header">
+  <div class="conteiner-header container">
+    <a class="logo" href="./index.html">Web<span>Studio</span></a>
+
+    <!-- Кнопка для відкриття меню (видима тільки на мобільних) -->
+    <button class="menu-toggle" aria-label="Open menu">
+      <svg class="menu-icon" width="24" height="24">
+        <use href="./images/icons.svg#icon-menu"></use>
+      </svg>
+    </button>
+
+    <!-- Навігація (видима на великих екранах) -->
+    <nav class="navigation">
+      <ul class="page-nav">
+        <li><a href="./index.html" class="nav-link">Studio</a></li>
+        <li><a href="" class="nav-link">Portfolio</a></li>
+        <li><a href="" class="nav-link">Contacts</a></li>
+      </ul>
+    </nav>
+
+    <!-- Контакти (видимі тільки на великих екранах) -->
+    <address class="contacts">
+      <ul class="list-contacts">
+        <li>
+          <a href="mailto:info@devstudio.com" class="item-contacts">info@devstudio.com</a>
+        </li>
+        <li>
+          <a href="tel:+110001111111" class="item-contacts">+11 (000) 111-11-11</a>
+        </li>
+      </ul>
+    </address>
+  </div>
+</header>
+
+<!-- Фонова підкладка -->
+<div class="menu-overlay is-hidden"></div>
+
+<!-- Мобільне меню -->
+<div class="mobile-menu is-hidden">
+  <button class="menu-close" aria-label="Close menu">
+    <svg class="menu-icon" width="32" height="32">
+      <use href="./images/icons.svg#icon-close"></use>
+    </svg>
+  </button>
+  <nav class="mobile-nav">
+    <ul class="page-nav">
+      <li><a href="./index.html" class="nav-link">Studio</a></li>
+      <li><a href="" class="nav-link">Portfolio</a></li>
+      <li><a href="" class="nav-link">Contacts</a></li>
+    </ul>
+  </nav>
+  <address class="contacts">
+    <ul class="list-contacts">
+      <li>
+        <a href="mailto:info@devstudio.com" class="item-contacts">info@devstudio.com</a>
+      </li>
+      <li>
+        <a href="tel:+110001111111" class="item-contacts">+11 (000) 111-11-11</a>
+      </li>
+    </ul>
+  </address>
+</div>
 
     <main>
       <!-- section1 -->
       <section class="section-page-titel">
-        <div class="container">
+        <div class="hero-titel container">
           <h1 class="page-title">Effective Solutions for Your Business</h1>
           <button type="button" class="button-text">Order Service</button>
         </div>
@@ -474,7 +508,121 @@
             </li>
           </ul>
         </div>
+        <div class="form-field">
+          <p class="text-label">Subscribe</p>
+          <form class="form">
+            <label class="form-label">
+              <input
+                class="input-field"
+                type="email"
+                name="email"
+                placeholder="E-mail"
+                required
+              />
+            </label>
+            <button type="submit" class="form-button">
+              Subscribe
+              <svg class="btn-footer-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-telegaram"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
+    <!-- Контейнер для модального вікна -->
+    <div class="backdrop">
+      <div class="modal">
+        <button type="button" class="modal-close">
+          <svg class="modal-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <p class="modal-title">Форма зворотного зв’язку</p>
+        <form class="modal-form">
+          <!-- Поле Name -->
+          <div class="form-field">
+            <label class="form-label" for="user-name">Name</label>
+            <div class="input-wrapper">
+              <input
+                class="form-input"
+                type="text"
+                id="user-name"
+                name="user-name"
+              />
+              <svg class="input-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-user1"></use>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Поле Phone -->
+          <div class="form-field">
+            <label class="form-label" for="user-phone">Phone</label>
+            <div class="input-wrapper">
+              <input
+                class="form-input"
+                type="text"
+                id="user-phone"
+                name="user-phone"
+              />
+              <svg class="input-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-phone1"></use>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Поле Email -->
+          <div class="form-field">
+            <label class="form-label" for="user-email">Email</label>
+            <div class="input-wrapper">
+              <input
+                class="form-input"
+                type="email"
+                id="user-email"
+                name="user-email"
+              />
+              <svg class="input-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-email2"></use>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Поле Comment -->
+          <div class="form-field comment">
+            <label class="form-label" for="user-comment">Comment</label>
+            <textarea
+              class="form-textarea"
+              id="user-comment"
+              name="user-comment"
+              placeholder="Text input"
+            ></textarea>
+          </div>
+
+          <!-- Чекбокс -->
+          <div class="form-checkbox">
+            <input
+              class="checkbox-input visually-hidden"
+              type="checkbox"
+              id="user-privacy"
+              name="user-privacy"
+              value="true"
+            />
+            <label class="checkbox-label" for="user-privacy">
+              <span class="checkbox-custom">
+                <svg class="checkbox-icon" width="10" height="8">
+                  <use href="./images/icons.svg#check"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a href="#" class="checkbox-link">Privacy Policy</a>
+            </label>
+          </div>
+
+          <!-- Кнопка -->
+          <button type="submit" class="form-submit">Send</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
