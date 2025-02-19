@@ -59,23 +59,25 @@
           </svg>
         </button>
       </div>
-
-      <div class="mobile-menu is-open">
+      <!-- mobile model -->
+      <div class="mobile-menu">
         <div class="container mobile-menu-container">
-          <button class="mobile-menu-close">Close</button>
+          <button class="mobile-menu-close">
+            <svg class="icon-mobile-close" width="24" height="24">
+              <use href="images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
           <nav class="mobile-menu-nav">
-            <ul class="mobile-nav-list">
-              <li class="nav-item">
-                <a class="nav-link current" href="./index.html">Studio</a>
+            <ul class="mobile-menu-list">
+              <li>
+                <a class="mobile-menu-link" href="./index.html">Studio</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="">Portfolio</a>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="">Contacts</a></li>
+              <li><a class="mobile-menu-link" href="">Portfolio</a></li>
+              <li><a class="mobile-menu-link" href="">Contacts</a></li>
             </ul>
           </nav>
           <address>
-            <ul class="contacts-list">
+            <ul class="contacts-list-mobile">
               <li class="contacts-item">
                 <a class="contacts-link" href="mailto:info@devstudio.com"
                   >info@devstudio.com</a
@@ -92,28 +94,28 @@
             <ul class="social-list">
               <li class="social-list-item">
                 <a href="#" class="social-link">
-                  <svg class="social-icon" width="16" height="16">
+                  <svg class="social-icon" width="24" height="24">
                     <use href="./images/icons.svg#icon-instagram"></use>
                   </svg>
                 </a>
               </li>
               <li class="social-list-item">
                 <a href="#" class="social-link">
-                  <svg class="social-icon" width="16" height="16">
+                  <svg class="social-icon" width="24" height="24">
                     <use href="./images/icons.svg#icon-facebook"></use>
                   </svg>
                 </a>
               </li>
               <li class="social-list-item">
                 <a href="#" class="social-link">
-                  <svg class="social-icon" width="16" height="16">
+                  <svg class="social-icon" width="24" height="24">
                     <use href="./images/icons.svg#icon-linkedin"></use>
                   </svg>
                 </a>
               </li>
               <li class="social-list-item">
                 <a href="#" class="social-link">
-                  <svg class="social-icon" width="16" height="16">
+                  <svg class="social-icon" width="24" height="24">
                     <use href="./images/icons.svg#icon-twitter"></use>
                   </svg>
                 </a>
@@ -124,16 +126,15 @@
       </div>
     </header>
 
-    <!-- <main>
-      
+    <main>
       <section class="section-page-titel">
         <div class="hero-titel container">
           <h1 class="page-title">Effective Solutions for Your Business</h1>
-          <button type="button" class="button-text">Order Service</button>
+          <button type="button" class="button-hero">Order Service</button>
         </div>
       </section>
-      
-      <section class="section-two">
+
+      <!-- <section class="section-two">
         <div class="container">
           <h2 class="visually-hidden">info</h2>
           <ul class="section-list">
@@ -187,9 +188,9 @@
             </li>
           </ul>
         </div>
-      </section>
-      
-      <section class="section-team">
+      </section> -->
+
+      <!-- <section class="section-team">
         <div class="container">
           <h2 class="section-titel">Our Team</h2>
 
@@ -374,9 +375,9 @@
             </li>
           </ul>
         </div>
-      </section>
-      
-      <section class="section-four">
+      </section> -->
+
+      <!-- <section class="section-four">
         <div class="container">
           <h2 class="section-titel">Our Portfolio</h2>
           <ul class="list-portfolio">
@@ -501,9 +502,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
     </main>
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container footer-container">
         <div class="footer-info">
           <a href="./index.html" class="logo footerlogo">
