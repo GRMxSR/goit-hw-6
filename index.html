@@ -21,78 +21,118 @@
     />
     <!-- Css -->
     <link rel="stylesheet" href="./css/style.css" />
-  <header class="header">
-  <div class="conteiner-header container">
-    <a class="logo" href="./index.html">Web<span>Studio</span></a>
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="container header-container">
+        <nav class="header-nav">
+          <a class="logo header-logo" href="./index.html"
+            >Web<span class="logo-part">Studio</span></a
+          >
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a class="nav-link current" href="./index.html">Studio</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="">Contacts</a></li>
+          </ul>
+        </nav>
 
-    <!-- Кнопка для відкриття меню (видима тільки на мобільних) -->
-    <button class="menu-toggle" aria-label="Open menu">
-      <svg class="menu-icon" width="24" height="24">
-        <use href="./images/icons.svg#icon-menu"></use>
-      </svg>
-    </button>
+        <address class="contacts">
+          <ul class="contacts-list">
+            <li class="contacts-item">
+              <a class="contacts-link" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+            <li class="contacts-item">
+              <a class="contacts-link" href="tel:+110001111111"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+          </ul>
+        </address>
 
-    <!-- Навігація (видима на великих екранах) -->
-    <nav class="navigation">
-      <ul class="page-nav">
-        <li><a href="./index.html" class="nav-link">Studio</a></li>
-        <li><a href="" class="nav-link">Portfolio</a></li>
-        <li><a href="" class="nav-link">Contacts</a></li>
-      </ul>
-    </nav>
+        <button class="burger-btn" type="button">
+          <svg class="burger-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+      </div>
 
-    <!-- Контакти (видимі тільки на великих екранах) -->
-    <address class="contacts">
-      <ul class="list-contacts">
-        <li>
-          <a href="mailto:info@devstudio.com" class="item-contacts">info@devstudio.com</a>
-        </li>
-        <li>
-          <a href="tel:+110001111111" class="item-contacts">+11 (000) 111-11-11</a>
-        </li>
-      </ul>
-    </address>
-  </div>
-</header>
+      <div class="mobile-menu is-open">
+        <div class="container mobile-menu-container">
+          <button class="mobile-menu-close">Close</button>
+          <nav class="mobile-menu-nav">
+            <ul class="mobile-nav-list">
+              <li class="nav-item">
+                <a class="nav-link current" href="./index.html">Studio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">Portfolio</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="">Contacts</a></li>
+            </ul>
+          </nav>
+          <address>
+            <ul class="contacts-list">
+              <li class="contacts-item">
+                <a class="contacts-link" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="contacts-item">
+                <a class="contacts-link" href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+            </ul>
+          </address>
+          <div class="mobile-social-list">
+            <ul class="social-list">
+              <li class="social-list-item">
+                <a href="#" class="social-link">
+                  <svg class="social-icon" width="16" height="16">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list-item">
+                <a href="#" class="social-link">
+                  <svg class="social-icon" width="16" height="16">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list-item">
+                <a href="#" class="social-link">
+                  <svg class="social-icon" width="16" height="16">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list-item">
+                <a href="#" class="social-link">
+                  <svg class="social-icon" width="16" height="16">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
 
-
-
-
-<!-- Мобільне меню -->
-<div class="mobile-menu is-hidden">
-  <button class="menu-close" aria-label="Close menu">
-    <svg class="menu-icon" width="32" height="32">
-      <use href="./images/icons.svg#icon-close"></use>
-    </svg>
-  </button>
-  <nav class="mobile-nav">
-    <ul class="page-nav">
-      <li><a href="./index.html" class="nav-link">Studio</a></li>
-      <li><a href="" class="nav-link">Portfolio</a></li>
-      <li><a href="" class="nav-link">Contacts</a></li>
-    </ul>
-  </nav>
-  <address class="contacts">
-    <ul class="list-contacts">
-      <li>
-        <a href="mailto:info@devstudio.com" class="item-contacts">info@devstudio.com</a>
-      </li>
-      <li>
-        <a href="tel:+110001111111" class="item-contacts">+11 (000) 111-11-11</a>
-      </li>
-    </ul>
-  </address>
-</div>
-
-    <main>
-      <!-- section1 -->
+    <!-- <main>
+      
       <section class="section-page-titel">
         <div class="hero-titel container">
           <h1 class="page-title">Effective Solutions for Your Business</h1>
           <button type="button" class="button-text">Order Service</button>
         </div>
       </section>
-      <!-- section2 -->
+      
       <section class="section-two">
         <div class="container">
           <h2 class="visually-hidden">info</h2>
@@ -148,8 +188,8 @@
           </ul>
         </div>
       </section>
-      <!-- section3 -->
-      <!-- <section class="section-team">
+      
+      <section class="section-team">
         <div class="container">
           <h2 class="section-titel">Our Team</h2>
 
@@ -164,7 +204,6 @@
               <div class="name-title">
                 <h3 class="section-subtitel">Mark Guerrero</h3>
                 <p class="section-text">Product Designer</p>
-                
                 
                 <ul class="social-list">
                   <li class="social-list-item">
@@ -240,7 +279,7 @@
                     </a>
                   </li>
                 </ul>
-                
+               
               </div>
             </li>
             <li class="icon-list">
@@ -285,7 +324,7 @@
                     </a>
                   </li>
                 </ul>
-                
+               
               </div>
             </li>
 
@@ -330,14 +369,14 @@
                     </a>
                   </li>
                 </ul>
-               
+                
               </div>
             </li>
           </ul>
         </div>
-      </section> -->
-      <!-- section4 -->
-      <!-- <section class="section-four">
+      </section>
+      
+      <section class="section-four">
         <div class="container">
           <h2 class="section-titel">Our Portfolio</h2>
           <ul class="list-portfolio">
@@ -462,7 +501,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
     </main>
     <footer class="footer">
       <div class="container footer-container">
@@ -530,9 +569,9 @@
           </form>
         </div>
       </div>
-    </footer> 
-     <!-- Контейнер для модального вікна -->
-    <div class="backdrop">
+    </footer> -->
+    <!-- Контейнер для модального вікна -->
+    <div class="backdrop hidden">
       <div class="modal">
         <button type="button" class="modal-close">
           <svg class="modal-icon" width="8" height="8">
