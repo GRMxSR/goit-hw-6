@@ -693,8 +693,6 @@ button {
   position: relative;
   overflow: hidden;
   display: block;
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .name-application {
   display: flex;
@@ -704,12 +702,14 @@ button {
   gap: 8px;
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
-
+  border-top: none;
+  box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  background: #fff;
   text-align: center;
 }
 .section-subtitel-sctf {
   text-align: normal;
-  margin-bottom: 8px;
+
   font-weight: 500;
   font-size: 20px;
   line-height: 120%;
@@ -719,7 +719,6 @@ button {
 .section-text-sctf {
   font-weight: 400;
   font-size: 16px;
-
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
@@ -749,4 +748,13 @@ button {
   width: 100%;
 }
 @media screen and (min-width: 768px) {
+  .list-portfolio {
+    gap: 72px 24px;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .item-portfolio {
+    width: calc((100% - 48px) / 2);
+  }
 }
