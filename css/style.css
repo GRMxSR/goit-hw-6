@@ -1066,7 +1066,7 @@ button {
   align-items: center;
   justify-content: center;
   opacity: 0;
-  padding: 8px 16px 9px;
+
   visibility: hidden;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1083,7 +1083,7 @@ button {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 288px;
-  height: 632px;
+  height: auto;
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1143,7 +1143,7 @@ button {
 
 /* 🔴 Поля форми */
 .form-field {
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 .comment {
   margin-bottom: 16px;
@@ -1281,10 +1281,14 @@ button {
 
 /* 🔵 Кнопка відправки */
 .form-submit {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
   border-radius: 4px;
   padding: 16px 32px;
-  min-width: 169px;
+  width: 169px;
   height: 56px;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
