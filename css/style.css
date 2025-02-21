@@ -34,7 +34,7 @@ a {
 img {
   display: block;
   max-width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 button {
@@ -378,6 +378,7 @@ button {
   background-size: cover;
   padding: 72px 52px;
   max-height: 432px;
+  max-width: 100%;
 }
 .hero-titel {
   display: flex;
@@ -552,7 +553,7 @@ button {
 }
 /* section3 */
 .section-team {
-  padding: 96px 10px;
+  padding: 96px 12px;
   background-color: #f4f4fd;
 }
 .section-titel {
@@ -693,6 +694,19 @@ button {
   position: relative;
   overflow: hidden;
   display: block;
+  width: 288px;
+  height: 400px;
+  box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+.image-container {
+  position: relative;
+  overflow: hidden;
+
+  width: 100%;
+  height: 300px;
+}
+.image-container img {
+  object-fit: cover;
 }
 .name-application {
   display: flex;
@@ -703,16 +717,15 @@ button {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
   border-top: none;
-  box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+
   background: #fff;
   text-align: center;
 }
 .section-subtitel-sctf {
-  text-align: normal;
-
   font-weight: 500;
   font-size: 20px;
-  line-height: 120%;
+  text-align: center;
+  line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
 }
@@ -729,7 +742,7 @@ button {
   top: 0;
   width: 100%;
   height: 100%;
-  padding: 40px 32px;
+  padding: 40px 32px 164px 32px;
   background-color: #4d5ae5;
   color: #f4f4fd;
   font-size: 16px;
@@ -742,11 +755,7 @@ button {
   justify-content: center;
   text-align: center;
 }
-.image-container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
+
 @media screen and (min-width: 768px) {
   .list-portfolio {
     gap: 72px 24px;
@@ -757,252 +766,295 @@ button {
   .item-portfolio {
     width: calc((100% - 48px) / 2);
   }
+  .item-portfolio {
+    width: 356px;
+    height: 420px;
+  }
 }
-/* 🔴 Фон модального вікна */
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(46, 47, 66, 0.4);
+@media screen and (min-width: 1155px) {
+  .list-portfolio {
+    gap: 48px 24px;
+  }
+  .item-portfolio {
+    width: calc((100% - 48px) / 3);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .item-portfolio:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+      0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  }
+  .image-container:hover .hover-text,
+  .image-container:focus .hover-text {
+    transform: translateY(0%);
+  }
+}
+/* block footer */
+.footer {
+  padding: 96px 0;
+  background-color: #2e2f42;
+}
+.footer-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 72px;
 }
-.backdrop.is-open {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* 🔵 Модальне вікно */
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 408px;
-  min-height: 584px;
-  background: #fcfcfc;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  padding: 72px 24px 24px;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* 🔴 Кнопка закриття */
-.modal-close {
-  box-sizing: border-box;
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background-color: #e7e9fc;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+/* ftr-logo-p */
+.footer-info {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+
+  gap: 16px;
+}
+.footerlogo {
+  display: flex;
   justify-content: center;
-  padding: 0;
-  cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  align-items: center;
 }
-
-.modal-close:hover,
-.modal-close:focus {
-  background-color: #404bbf;
-  border: none;
+.footer-logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #f4f4fd;
 }
-
-/* Іконка у кнопці закриття */
-.modal-icon {
-  width: 12px;
-  height: 12px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-close:hover .modal-icon,
-.modal-close:focus .modal-icon {
-  fill: #ffffff;
-}
-
-/* 🔵 Заголовок */
-.modal-title {
-  font-weight: 500;
+.footer-text {
+  font-weight: 400;
   font-size: 16px;
+  align-items: center;
+  justify-content: flex-start;
   line-height: 1.5;
-  text-align: center;
   letter-spacing: 0.02em;
-  color: var(--color-dark, #2e2f42);
-  margin-bottom: 16px;
+  color: #f4f4fd;
 }
-
-/* 🔴 Поля форми */
-.form-field {
-  margin-bottom: 8px;
-}
-.comment {
-  margin-bottom: 16px;
-}
-/* Label */
-.form-label {
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-  color: var(--color-light-gray, #8e8f99);
-  display: block;
-  margin-bottom: 4px;
-}
-
-/* Контейнер для input та іконки */
-.input-wrapper {
-  position: relative;
-}
-
-/* Input */
-.form-input {
-  width: 100%;
-  height: 40px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  border-radius: 4px;
-  background-color: transparent;
-  padding-left: 38px;
-  outline: transparent;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.form-input:focus {
-  border-color: #4d5ae5;
-}
-
-/* Іконка в полі вводу */
-.input-icon {
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.form-input:focus + .input-icon {
-  fill: #4d5ae5;
-}
-
-/* 🔵 Текстова область */
-.form-textarea {
-  width: 100%;
-  height: 120px;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-  color: rgba(46, 47, 66, 0.4);
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  border-radius: 4px;
-  background-color: transparent;
-  padding: 8px 16px;
-  outline: transparent;
-  resize: none;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.form-textarea:focus {
-  border-color: #4d5ae5;
-}
-
-/* 🔴 Чекбокс */
-.form-checkbox {
-  margin-bottom: 24px;
+/* social-media-footer */
+.footer-social {
   display: flex;
-  align-items: center;
-}
-
-/* Приховуємо дефолтний чекбокс */
-.checkbox-input.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-
-/* Стилізація label */
-.checkbox-label {
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-  color: var(--color-light-gray, #8e8f99);
-}
-/* Стилізація кастомного чекбокса */
-.checkbox-custom {
-  width: 16px;
-  height: 16px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  border-radius: 2px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  fill: transparent;
-  margin-right: 8px;
-}
-
-/* Іконка чекбоксу */
-.checkbox-icon {
-  opacity: 0;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Активний стан чекбоксу */
-.checkbox-input:checked + .checkbox-label .checkbox-custom {
-  background-color: var(--color-primary, #404bbf);
-  border: none;
-  fill: var(--color-light, #f4f4fd);
-}
-
-.checkbox-input:checked + .checkbox-label .checkbox-icon {
-  opacity: 1;
-}
-
-/* Посилання на Privacy Policy */
-.checkbox-link {
-  color: #4d5ae5;
-  text-decoration: underline;
-}
-
-/* 🔵 Кнопка відправки */
-.form-submit {
-  display: block;
-  border-radius: 4px;
-  padding: 16px 32px;
-  min-width: 169px;
-  height: 56px;
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  color: white;
-  background-color: #4d5ae5;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  border: none;
+  flex-direction: column;
+  gap: 16px;
 
   margin: 0 auto;
-  cursor: pointer;
+}
+.social-titel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+.social-list-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 16px;
+}
+.social-item {
+  display: block;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #4d5ae5;
+}
+.social-link-footer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.social-icon-footer {
+  fill: #f4f4fd;
+}
+/* forma */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 
-.form-submit:hover {
-  background-color: #404bbf;
+.text-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+.input-field {
+  width: 288px;
+  height: 40px;
+  background-color: transparent;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  padding-left: 16px;
+  color: #ffffff;
+  opacity: 0.3;
+}
+.input-field::placeholder {
+  color: #ffffff;
+}
+
+.form-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 16px;
+  padding: 8px 24px;
+  border: none;
+  border-radius: 4px;
+  width: 165px;
+  height: 40px;
+  background: #4d5ae5;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #fff;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 96px 92px;
+  }
+  .footer-container {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 72px 24px;
+  }
+  .footer-social {
+    margin: 0;
+  }
+  .form-field {
+    justify-content: space-between;
+    gap: 16px 24px;
+  }
+  .footer-info {
+    max-width: 264px;
+  }
+
+  .form {
+    flex-direction: row;
+    gap: 24px;
+    align-items: center;
+  }
+  .input-field {
+    width: 264px;
+  }
+  .text-label {
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .social-titel {
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .footer {
+    padding: 100px 0px;
+  }
+  .footerlogo {
+    justify-content: flex-start;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 120px;
+  }
+
+  .footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 264px;
+  }
+
+  .footer-logo {
+    font-size: 18px;
+    font-weight: 700;
+    color: #f4f4fd;
+  }
+
+  .footer-text {
+    font-size: 16px;
+    color: #f4f4fd;
+    line-height: 1.5;
+  }
+
+  .footer-social {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .social-titel {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .social-list-footer {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-start;
+  }
+
+  .input-field {
+    width: 264px;
+    height: 40px;
+    font-size: 12px;
+    color: #ffffff;
+    border: 1px solid #fff;
+    padding-left: 16px;
+    border-radius: 4px;
+  }
+
+  .form-button {
+    background-color: #4d5ae5;
+    color: #fff;
+    padding: 8px 24px;
+    font-size: 16px;
+    border-radius: 4px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    align-items: center;
+  }
 }
